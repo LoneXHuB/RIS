@@ -2,12 +2,11 @@ import rospy
 from std_msgs.msg import String
 
 def string_to_hex(string):
-    string = str(string)
-    # Convert string to binary
-    binary = ''.join(format(ord(char), '08b') for char in string)
+    # Convert string to binary integer
+    binary_int = int(string, 2)
     
-    # Convert binary to hex
-    hexcode = hex(int(binary, 2))[2:].upper()
+    # Convert binary integer to hex
+    hexcode = hex(binary_int)[2:].upper()
     
     return hexcode
     
