@@ -2,6 +2,7 @@ import rospy
 from std_msgs.msg import String
 
 def string_to_hex(string):
+    string = str(string)
     # Convert string to binary
     binary = ''.join(format(ord(char), '08b') for char in string)
     
