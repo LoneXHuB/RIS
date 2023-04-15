@@ -2,6 +2,9 @@ import rospy
 from std_msgs.msg import String
 
 def string_to_hex(string):
+    # Convert input to a string if it is not already a string
+    string = str(string)
+    
     # Convert string to binary integer
     binary_int = int(string, 2)
     
